@@ -14,8 +14,8 @@
 
     /* SURFACE */
 
-    --color-surface: #F6F6F9;
-    --color-surface-hover: #60a5fa20;
+    --color-surface: #F1F5F9;
+    --color-surface-hover: #DFEBF9;
 
     /* TEXT */
 
@@ -38,17 +38,18 @@
 
 .dark{
 
-    --color-background: #0B1220;
-    --color-background-secondary: #070c17;
-    --color-background-tertiary: #1E293B;
+    --color-background: #070c17;
+    --color-background-secondary: #101B2E;
+    --color-background-tertiary: #0B1220;
 
-    --color-surface: #070c17;
-    --color-surface-hover: #60a5fa10;
+
+    --color-surface: #0B1220;
+    --color-surface-hover: #101B2E;
 
     --color-text: #F8FAFC;
     --color-text-secondary: #CBD5E1;
     --color-text-muted: #94A3B8;
 
-    --color-border: #111827;
+    --color-border: #101520;
 
 }

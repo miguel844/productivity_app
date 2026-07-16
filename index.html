@@ -7,29 +7,52 @@
     <title>Productivity App</title>
     <link rel="stylesheet" href="assets/css/output.css">
 
-<script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-<script src="assets/js/main.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </head>
 
-<body class="bg-background text-text dark">
-    <content class="container mx-auto w-full h-screen flex">
+<body class="bg-background text-text">
+    <content class="container mx-auto w-full h-screen flex border-x border-border">
 
-        <aside class="bg-surface p-8 border-x border-border min-w-xs">
-            <div class="flex items-center justify-evenly mb-5">
-                <img src="/assets/icons/logo_M_hex_bgB.svg" alt="Logo MACM HUB" class="h-15">
-                <h2 class="font-title text-2xl font-semibold">MACM <span class="text-brand">HUB</span></h2>
+        <aside class="hidden md:block bg-surface p-4 border-r border-border min-w-xs">
+            <div class="flex items-center gap-4 justify-center mb-5">
+                <img id="logoMenu" src="/assets/icons/logo_M_hex_bgW.svg" alt="Logo MACM HUB" class="h-15">
+                <h2 class="font-title text-3xl font-semibold">MACM <span class="text-brand">HUB</span></h2>
             </div>
             <ul>
-                <li><a href="#" class="flex px-2 py-4 rounded-md hover:bg-surface-hover hover:text-brand-hover"><i data-lucide="home" class="mr-5"></i>Resumen</a></li>
-                <li><a href="#" class="flex px-2 py-4 rounded-md hover:bg-surface-hover hover:text-brand-hover"><i data-lucide="calendar-days" class="mr-5"></i>Agenda</a></li>
-                
-            </ul>
+                <li class="mb-0.75"><a href="#"
+                        class="flex px-2 py-4 rounded-md hover:bg-surface-hover hover:text-brand-hover"><i
+                            data-lucide="House" class="mr-5"></i>Resumen</a></li>
+                <li><a href="#" class="flex px-2 py-4 rounded-md bg-surface-hover text-brand-hover"><i
+                            data-lucide="CalendarDays" class="mr-5"></i>Agenda</a></li>
 
+            </ul>
         </aside>
 
-        <main>
+        <main class="w-full">
+            <header class="flex justify-between items-center">
+                <div>
+                    <p class="text-4xl p-4 font-bold">Buenos días, Miguel Angel!</p>
+                    <p class="px-4 text-text-muted">Martes, 10 de agosto del 2026</p>
+                </div>
+                <div class="flex items-center">
 
+                    <div class="bg-background-secondary border border-border rounded-xl p-1 flex items-center gap-2 m-1 cursor-pointer">
+                        <div class="w-12 h-12 bg-background-tertiary rounded-full"></div>
+                        <p>Miguel Angel</p>
+                        <i data-lucide="ChevronDown"></i>
+                    </div>
+                    <div id="darkMode" class="mx-4 transition-colors duration-200 cursor-pointer">
+                        <i id="themeIcon" data-lucide="moon"></i>
+                    </div>
+                </div>
+
+            </header>
+            <div class="w-50 h-50 bg-background-secondary border border-border rounded-xl m-5">
+                <div class="w-20 h-20 bg-background-tertiary border border-border rounded-xl m-5">
+                </div>
+            </div>
         </main>
 
     </content>
