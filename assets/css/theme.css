@@ -1,0 +1,54 @@
+:root{
+
+    /* BRAND */
+
+    --color-brand: #2563EB;
+    --color-brand-hover: #1D4ED8;
+    --color-brand-light: #60A5FA;
+
+    /* BACKGROUND */
+
+    --color-background: #F8FAFC;
+    --color-background-secondary: #FFFFFF;
+    --color-background-tertiary: #F1F5F9;
+
+    /* SURFACE */
+
+    --color-surface: #F6F6F9;
+    --color-surface-hover: #60a5fa20;
+
+    /* TEXT */
+
+    --color-text: #111827;
+    --color-text-secondary: #6B7280;
+    --color-text-muted: #9CA3AF;
+
+    /* BORDER */
+
+    --color-border: #E5E7EB;
+
+    /* STATUS */
+
+    --color-success: #22C55E;
+    --color-warning: #F59E0B;
+    --color-danger: #EF4444;
+    --color-info: #06B6D4;
+
+}
+
+.dark{
+
+    --color-background: #0B1220;
+    --color-background-secondary: #070c17;
+    --color-background-tertiary: #1E293B;
+
+    --color-surface: #070c17;
+    --color-surface-hover: #60a5fa10;
+
+    --color-text: #F8FAFC;
+    --color-text-secondary: #CBD5E1;
+    --color-text-muted: #94A3B8;
+
+    --color-border: #111827;
+
+}
