@@ -19,3 +19,15 @@ darkMode.addEventListener("click", function () {
     }
     lucide.createIcons();
 });
+
+// Fecha
+const currentDate = document.getElementById("currentDate");
+
+const date = new Date();
+const formatEs = new Intl.DateTimeFormat('es-ES', {
+    dateStyle: 'full'
+}).format(date);
+
+console.log(formatEs);
+
+currentDate.textContent = "Hoy es " + formatEs;

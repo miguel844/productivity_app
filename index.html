@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productivity App</title>
     <link rel="stylesheet" href="assets/css/output.css">
-
+    <!-- CDN lucide (iconos) -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <script src="assets/js/main.js" defer></script>
@@ -28,31 +28,28 @@
                             data-lucide="CalendarDays" class="mr-5"></i>Agenda</a></li>
 
             </ul>
-        </aside>
-
-        <main class="w-full">
-            <header class="flex justify-between items-center">
-                <div>
-                    <p class="text-4xl p-4 font-bold">Buenos días, Miguel Angel!</p>
-                    <p class="px-4 text-text-muted">Martes, 10 de agosto del 2026</p>
-                </div>
-                <div class="flex items-center">
+            <div class="flex items-center">
 
                     <div class="bg-background-secondary border border-border rounded-xl p-1 flex items-center gap-2 m-1 cursor-pointer">
-                        <div class="w-12 h-12 bg-background-tertiary rounded-full"></div>
+                        <div class="w-12 h-12 bg-background-tertiary border border-border rounded-full"></div>
                         <p>Miguel Angel</p>
-                        <i data-lucide="ChevronDown"></i>
+                        <i data-lucide="ChevronUp"></i>
                     </div>
                     <div id="darkMode" class="mx-4 transition-colors duration-200 cursor-pointer">
                         <i id="themeIcon" data-lucide="moon"></i>
                     </div>
                 </div>
+        </aside>
+
+        <main class="w-full">
+            <header>
+                <div>
+                    <p class="text-4xl p-4 font-bold">Buenos días, Miguel Angel!</p>
+                    <p id="currentDate" class="px-4 text-text-muted">Fecha</p>
+                </div>
+                
 
             </header>
-            <div class="w-50 h-50 bg-background-secondary border border-border rounded-xl m-5">
-                <div class="w-20 h-20 bg-background-tertiary border border-border rounded-xl m-5">
-                </div>
-            </div>
         </main>
 
     </content>
