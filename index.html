@@ -14,8 +14,8 @@
 
 <body class="bg-background text-text">
     <content class="container mx-auto w-full h-screen flex border-x border-border">
-
-        <aside class="hidden md:block bg-surface p-4 border-r border-border min-w-xs">
+        <!-- Menu lateral -->
+        <aside class="hidden md:flex md:flex-col bg-surface p-4 pb-2 border-r border-border w-xs">
             <div class="flex items-center gap-4 justify-center mb-5">
                 <img id="logoMenu" src="/assets/icons/logo_M_hex_bgW.svg" alt="Logo MACM HUB" class="h-15">
                 <h2 class="font-title text-3xl font-semibold">MACM <span class="text-brand">HUB</span></h2>
@@ -28,17 +28,25 @@
                             data-lucide="CalendarDays" class="mr-5"></i>Agenda</a></li>
 
             </ul>
-            <div class="flex items-center">
+            <!-- Menu usuario -->
+            <div class="flex flex-col items-center mt-auto">
+                <div class="bg-background-secondary w-full border border-border rounded-xl p-1 flex items-center cursor-pointer">
 
-                    <div class="bg-background-secondary border border-border rounded-xl p-1 flex items-center gap-2 m-1 cursor-pointer">
-                        <div class="w-12 h-12 bg-background-tertiary border border-border rounded-full"></div>
-                        <p>Miguel Angel</p>
-                        <i data-lucide="ChevronUp"></i>
+                    <div class="w-12 h-12 bg-background-tertiary border border-border rounded-full"></div>
+
+                    <div class="flex-1 px-3 min-w-0">
+                        <p class="wrap-break-word ">
+                            Miguel Ángel
+                        </p>
                     </div>
-                    <div id="darkMode" class="mx-4 transition-colors duration-200 cursor-pointer">
-                        <i id="themeIcon" data-lucide="moon"></i>
-                    </div>
+
+                    <i data-lucide="ChevronUp"></i>
+
                 </div>
+                <div id="darkMode" class="mt-2 transition-colors duration-200 cursor-pointer">
+                    <i id="themeIcon" data-lucide="moon"></i>
+                </div>
+            </div>
         </aside>
 
         <main class="w-full">
@@ -47,7 +55,7 @@
                     <p class="text-4xl p-4 font-bold">Buenos días, Miguel Angel!</p>
                     <p id="currentDate" class="px-4 text-text-muted">Fecha</p>
                 </div>
-                
+
 
             </header>
         </main>

@@ -28,6 +28,4 @@ const formatEs = new Intl.DateTimeFormat('es-ES', {
     dateStyle: 'full'
 }).format(date);
 
-console.log(formatEs);
-
 currentDate.textContent = "Hoy es " + formatEs;
