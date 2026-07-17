@@ -29,3 +29,17 @@ const formatEs = new Intl.DateTimeFormat('es-ES', {
 }).format(date);
 
 currentDate.textContent = "Hoy es " + formatEs;
+
+// Buenos dias, buenas tardes o buenas noches
+const currentHours = date.getHours();
+const goodDay = document.getElementById("goodDay");
+const nameUser = "Miguel Ángel";
+
+if (currentHours >= 6 && currentHours < 12) {
+    goodDay.textContent = "Buenos dias, " + nameUser + "!";
+} else if (currentHours >= 12 && currentHours < 21) {
+    goodDay.textContent = "Buenas tardes, " + nameUser + "!";
+} else {
+    goodDay.textContent = "Buenas noches, " + nameUser + "!";
+}
+console.log(date.getHours());
