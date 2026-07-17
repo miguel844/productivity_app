@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productivity App</title>
+    <title>MACM HUB</title>
     <link rel="stylesheet" href="assets/css/output.css">
     <!-- CDN lucide (iconos) -->
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -13,7 +13,7 @@
 </head>
 
 <body class="bg-background text-text">
-    <content class="container mx-auto w-full h-screen flex border-x border-border">
+    <div class="container mx-auto w-full h-screen flex border-x border-border">
         <!-- Menu lateral -->
         <aside class="hidden md:flex md:flex-col bg-surface p-4 pb-2 border-r border-border w-xs">
             <div class="flex items-center gap-4 justify-center mb-5">
@@ -55,12 +55,10 @@
                     <p id="goodDay" class="text-4xl p-4 font-bold"></p>
                     <p id="currentDate" class="px-4 text-text-muted">Fecha</p>
                 </div>
-
-
             </header>
         </main>
 
-    </content>
+    </div>
 
 </body>
 

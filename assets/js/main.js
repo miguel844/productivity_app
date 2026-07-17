@@ -3,7 +3,7 @@ init();
 function init() {
 
     lucide.createIcons(); // Exportamos los iconos desde el cdn de lucide
-    initDarkMode(); // Inicializamos el modo oscuro
+    setupDarkMode(); // Inicializamos el modo oscuro
     const date = new Date(); // Inicializamos fecha
     showGreeting(date); // Mostramos saludo
     showDate(date); // Mostramos fecha
@@ -11,7 +11,7 @@ function init() {
 // FIN DE LA INICIALIZACION ********************************************************
 
 // Boton modo oscuro
-function initDarkMode() {
+function setupDarkMode() {
 
     const darkMode = document.getElementById("darkMode");
     const logo = document.getElementById("logoMenu");
@@ -40,7 +40,7 @@ function showDate(date) {
         dateStyle: 'full'
     }).format(date);
 
-    currentDate.textContent = "Hoy es " + formatEs;
+    currentDate.textContent = `Hoy es ${formatEs}`;
 }
 
 // Buenos dias, buenas tardes o buenas noches
