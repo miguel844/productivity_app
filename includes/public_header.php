@@ -1,7 +1,10 @@
-<header>
-    <a href="index.php">
-        <div class="select-none mx-auto flex flex-col items-center md:flex-row md:items-start md:gap-5 mt-5">
-            <img class="h-75" src="../assets/icons/logo_M_hex_light.svg" alt="">
+<header class="w-full">
+    <div id="darkMode" class="flex justify-end mr-2 mt-2 transition-colors duration-200 cursor-pointer">
+        <i data-lucide="moon"></i>
+    </div>
+    <a href="index.php" class="flex justify-center cursor-default">
+        <div class="select-none mx-auto flex flex-col items-center md:flex-row md:items-start md:gap-5">
+            <img id="logo" class="h-75" src="../assets/icons/logo_M_hex_light.svg" alt="">
             <div class="md:h-75 md:flex md:flex-col md:justify-center">
                 <p class="text-9xl font-bold font-title">MACM</p>
                 <div class="flex items-center justify-center">
