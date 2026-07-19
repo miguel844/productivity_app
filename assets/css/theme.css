@@ -20,7 +20,7 @@
     /* TEXT */
 
     --color-text: #111827;
-    --color-text-secondary: #6B7280;
+    --color-text-secondary: #F8FAFC;
     --color-text-muted: #9CA3AF;
 
     /* BORDER */
@@ -47,7 +47,7 @@
     --color-surface-hover: #101B2E;
 
     --color-text: #F8FAFC;
-    --color-text-secondary: #CBD5E1;
+    --color-text-secondary: #111827;
     --color-text-muted: #94A3B8;
 
     --color-border: #101520;
