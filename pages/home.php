@@ -15,10 +15,13 @@
             
             
             <section class="md:w-full w-3xs flex flex-col items-center gap-5 md:flex-row md:justify-evenly md:gap-0 mt-5 mx-auto">
-                <div class="cursor-pointer w-32.5 py-2 rounded-md text-text-secondary bg-brand hover:bg-brand-hover text-center">Iniciar sesion</div>
-                <div class="cursor-pointer w-32.5 py-2 rounded-md text-text-secondary bg-brand hover:bg-brand-hover text-center">Registrate</div>
+                <a href="?page=login">
+                    <div class="cursor-pointer w-32.5 py-2 rounded-md text-text-secondary bg-brand hover:bg-brand-hover text-center">Iniciar sesion</div>
+                </a>
+                <a href="?page=register">
+                    <div class="cursor-pointer w-32.5 py-2 rounded-md text-text-secondary bg-brand hover:bg-brand-hover text-center">Registrate</div>
+                </a>
             </section>
-            
             
             
         </main>
