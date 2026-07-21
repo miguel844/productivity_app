@@ -14,6 +14,7 @@ define(
         ';charset=utf8mb4'
 );
 
+// define('PASSWORD_DEFAULT', 'macm_hub');
 
 try {
     // Opciones recomendadas

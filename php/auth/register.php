@@ -1,6 +1,9 @@
 <?php
 session_start();
 
+require_once __DIR__ . '/../../config/database.php';
+require_once __DIR__ . '/../models/user.php';
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     // header("Location: ../../index.php?page=register");
     // exit;
@@ -13,6 +16,8 @@ $password = filter_input(INPUT_POST, 'password');
 $confirmPassword = filter_input(INPUT_POST, 'confirm_password');
 
 $errors = [];
+
+$user = false;
 
 // Comprobamos el nombre
 $name = trim($name);
@@ -29,10 +34,10 @@ if (!preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/', $password)) $errors[]
 
 
 $confirmPassword = trim($confirmPassword);
-if ($password !== $confirmPassword) $errors[] = "Las contraseñas no coinciden"; 
+if ($password !== $confirmPassword) $errors[] = "Las contraseñas no coinciden";
 
-
-if (!empty($errors)){
+// Comprobamos si hay errores
+if (!empty($errors)) {
     // Mostramos los errores en pages/register.php
     $_SESSION['errors'] = $errors;
     $_SESSION['old'] = [
@@ -43,12 +48,30 @@ if (!empty($errors)){
     exit;
 }
 
+// Comprobamos si existe el correo en nuestra DB
+$user = getUserByEmail($pdo, $email);
 
+if ($user !== false) {
+    $_SESSION['errors'] = ['Ese correo electrónico ya está registrado.'];
 
+    $_SESSION['old'] = [
+        'name' => $name,
+        'email' => $email
+    ];
+    header("Location: ../../index.php?page=register");
+    exit;
+}
 
+$passwordHash = password_hash($password, PASSWORD_DEFAULT);
 
+if (createUser($pdo, $name, $email, $passwordHash)) {
+    $_SESSION['userCreated'] = "El usuario ha sido creado correctamente";
+    $_SESSION['loginEmail'] = $email;
+    header("Location: ../../index.php?page=login");
+    exit;
+} else {
+    $_SESSION['errors'] = ['Ha ocurrido un error al crear la cuenta.'];
 
-?>
-
-
-<a href='../../index.php?page=register' class='text-brand hover:text-brand-hover'>Registro</a>
+    header("Location: ../../index.php?page=register");
+    exit;
+}
