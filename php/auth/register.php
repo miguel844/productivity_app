@@ -5,9 +5,8 @@ require_once __DIR__ . '/../../config/database.php';
 require_once __DIR__ . '/../models/user.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    // header("Location: ../../index.php?page=register");
-    // exit;
-    die("Cuando sepa mandaremos al usuario de vuelta a la pagina de registro");
+    header("Location: ../../index.php?page=register");
+    exit;
 }
 
 $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
