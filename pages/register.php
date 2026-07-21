@@ -1,3 +1,12 @@
+<?php
+
+$errors = $_SESSION['errors'] ?? [];
+unset($_SESSION['errors']);
+
+$old = $_SESSION['old'] ?? [];
+unset($_SESSION['old']);
+
+?>
 <!-- HEAD -->
 <?php include_once __DIR__ . '/../includes/head.php'; ?>
 
@@ -13,11 +22,21 @@
                     Crear cuenta
                 </h1>
 
-                <p class="text-text-muted text-center mb-8">
+                <p class="text-text-muted text-center mb-4">
                     Regístrate para comenzar a utilizar MACM HUB.
                 </p>
 
-                <form action="?page=register" method="POST" class="flex flex-col gap-5">
+                <?php if (!empty($errors)): ?>
+                    <div class="mb-4 rounded-md border border-danger bg-danger/10 p-4">
+                        <ul class="text-sm text-danger">
+                            <?php foreach ($errors as $error): ?>
+                                <li><?= htmlspecialchars($error) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+
+                <form action="php/auth/register.php" method="POST" class="flex flex-col gap-5">
 
                     <div>
                         <label for="name" class="block mb-2 font-medium">
@@ -29,6 +48,8 @@
                             name="name"
                             required
                             maxlength="50"
+                            placeholder="Tu nombre"
+                            value="<?= htmlspecialchars($old['name'] ?? '') ?>"
                             class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
@@ -42,6 +63,8 @@
                             name="email"
                             required
                             maxlength="100"
+                            placeholder="correo@ejemplo.com"
+                            value="<?= htmlspecialchars($old['email'] ?? '') ?>"
                             class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
@@ -55,6 +78,7 @@
                             name="password"
                             required
                             minlength="8"
+                            placeholder="********"
                             class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
@@ -68,6 +92,7 @@
                             name="confirm_password"
                             required
                             minlength="8"
+                            placeholder="********"
                             class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
@@ -78,13 +103,14 @@
                     </button>
 
                 </form>
-
-                <p class="mt-6 text-center text-text-muted">
-                    ¿Ya tienes una cuenta?
-                    <a href="?page=login" class="text-brand hover:text-brand-hover">
-                        Inicia sesión
-                    </a>
-                </p>
+                <div class="mt-6 text-center">
+                    <p class="text-text-muted">
+                        ¿Ya tienes una cuenta?
+                        <a href="?page=login" class="text-brand hover:text-brand-hover">
+                            Inicia sesión
+                        </a>
+                    </p>
+                </div>
 
             </section>
 

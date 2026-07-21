@@ -1,6 +1,10 @@
 <?php
 session_start();
 
+// Conexion base de datos
+require_once __DIR__ .'/config/database.php';
+
+// Enrutador
 if (isset($_SESSION['user'])) {
     // Include zona privada
 } else {

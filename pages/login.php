@@ -1,5 +1,3 @@
-<!-- Conexion base de datos -->
-<?php require_once __DIR__ .'/../config/database.php';?>
 <!-- HEAD -->
 <?php include_once __DIR__ . '/../includes/head.php'; ?>
 
@@ -11,7 +9,7 @@
 
             <section class="w-full max-w-md bg-surface border border-border rounded-xl p-8 mt-5">
 
-                <h1 class="text-3xl font-title text-center mb-2">
+                <h1 class="text-3xl font-bold font-title text-center mb-2">
                     Iniciar sesión
                 </h1>
 
@@ -22,7 +20,7 @@
                 <form action="" method="post" class="flex flex-col gap-5">
 
                     <div>
-                        <label for="email" class="block mb-2">
+                        <label for="email" class="block mb-2 font-medium">
                             Correo electrónico
                         </label>
 
@@ -31,11 +29,11 @@
                             id="email"
                             name="email"
                             placeholder="correo@ejemplo.com"
-                            class="w-full px-4 py-2 rounded-md bg-background-secondary border border-border focus:outline-none focus:ring-2 focus:ring-brand">
+                            class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
                     <div>
-                        <label for="password" class="block mb-2">
+                        <label for="password" class="block mb-2 font-medium">
                             Contraseña
                         </label>
 
@@ -44,7 +42,7 @@
                             id="password"
                             name="password"
                             placeholder="********"
-                            class="w-full px-4 py-2 rounded-md bg-background-secondary border border-border focus:outline-none focus:ring-2 focus:ring-brand">
+                            class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
                     <button

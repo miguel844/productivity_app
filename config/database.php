@@ -28,3 +28,23 @@ try {
     // Manejo del error y detendra la ejecucion del codigo con el die
     die('Error: ' . $e->getMessage());
 }
+
+
+/*
+
+define('DB_HOSTNAME', 'mysql-miguel844.alwaysdata.net');
+define('DB_USER', 'miguel844');
+define('DB_PASSWORD', 'Mi5121988');
+
+define('DB_SCHEMA', 'miguel844_macm');
+
+
+
+
+
+define('DB_HOSTNAME', 'localhost');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '');
+
+define('DB_SCHEMA', 'macm_hub');
+*/
