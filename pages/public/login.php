@@ -1,10 +1,18 @@
+<?php
+$email = $_SESSION['loginEmail'] ?? '';
+unset($_SESSION['loginEmail']);
+
+$errors = $_SESSION['errors'] ?? [];
+unset($_SESSION['errors']);
+?>
+
 <!-- HEAD -->
-<?php include_once __DIR__ . '/../includes/head.php'; ?>
+<?php include_once __DIR__ . '/../../includes/head.php'; ?>
 
 <body class="bg-background text-text">
     <div class="container mx-auto w-full h-screen flex flex-col items-center border-x border-border">
         <!-- Cabecera -->
-        <?php include_once __DIR__ . '/../includes/public_header.php'; ?>
+        <?php include_once __DIR__ . '/../../includes/public_header.php'; ?>
         <main class="flex-1 flex items-start justify-center px-6">
 
             <section class="w-full max-w-md bg-surface border border-border rounded-xl p-8 mt-5">
@@ -13,11 +21,21 @@
                     Iniciar sesión
                 </h1>
 
-                <p class="text-text-muted text-center mb-8">
+                <p class="text-text-muted text-center mb-4">
                     Accede a tu cuenta de MACM HUB.
                 </p>
 
-                <form action="" method="post" class="flex flex-col gap-5">
+                <?php if (!empty($errors)): ?>
+                    <div class="mb-4 rounded-md border border-danger bg-danger/10 p-4">
+                        <ul class="text-sm text-danger">
+                            <?php foreach ($errors as $error): ?>
+                                <li><?= htmlspecialchars($error) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
+
+                <form action="php/auth/login.php" method="post" class="flex flex-col gap-5">
 
                     <div>
                         <label for="email" class="block mb-2 font-medium">
@@ -28,7 +46,8 @@
                             type="email"
                             id="email"
                             name="email"
-                            placeholder="correo@ejemplo.com"
+                            placeholder="ejemplo@ejemplo.com"
+                            value="<?= htmlspecialchars($email) ?>"
                             class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
@@ -41,7 +60,7 @@
                             type="password"
                             id="password"
                             name="password"
-                            placeholder="********"
+                            placeholder="Ab123456789"
                             class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
@@ -66,7 +85,7 @@
 
         </main>
         <!-- Footer -->
-        <?php include_once __DIR__ . '/../includes/footer.php'; ?>
+        <?php include_once __DIR__ . '/../../includes/footer.php'; ?>
 
     </div>
 </body>

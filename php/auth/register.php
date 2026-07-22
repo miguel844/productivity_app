@@ -51,7 +51,7 @@ if (!empty($errors)) {
 $user = getUserByEmail($pdo, $email);
 
 if ($user !== false) {
-    $_SESSION['errors'] = ['Ese correo electrónico ya está registrado.'];
+    $_SESSION['errors'] = ['El correo electrónico ya está registrado.'];
 
     $_SESSION['old'] = [
         'name' => $name,

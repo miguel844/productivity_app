@@ -12,13 +12,16 @@ if (isset($_SESSION['user'])) {
 
     switch ($page){
         case 'login':
-        include_once __DIR__ .'/pages/login.php';
+        include_once __DIR__ .'/pages/public/login.php';
         break;
         case 'register':
-        include_once __DIR__ .'/pages/register.php';
+        include_once __DIR__ .'/pages/public/register.php';
+        break;
+        case 'dashboard':
+        include_once __DIR__ .'/pages/private/dashboard.php';
         break;
         
         default:
-        include_once __DIR__ .'/pages/home.php';
+        include_once __DIR__ .'/pages/public/home.php';
     }
 }

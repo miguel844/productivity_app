@@ -8,12 +8,12 @@ unset($_SESSION['old']);
 
 ?>
 <!-- HEAD -->
-<?php include_once __DIR__ . '/../includes/head.php'; ?>
+<?php include_once __DIR__ . '/../../includes/head.php'; ?>
 
 <body class="bg-background text-text">
     <div class="container mx-auto w-full h-screen flex flex-col items-center border-x border-border">
         <!-- Cabecera -->
-        <?php include_once __DIR__ . '/../includes/public_header.php'; ?>
+        <?php include_once __DIR__ . '/../../includes/public_header.php'; ?>
         <main class="flex-1 flex items-start justify-center px-6 mt-8">
 
             <section class="w-full max-w-md bg-surface border border-border rounded-xl p-8 mt-5">
@@ -116,7 +116,7 @@ unset($_SESSION['old']);
 
         </main>
         <!-- Footer -->
-        <?php include_once __DIR__ . '/../includes/footer.php'; ?>
+        <?php include_once __DIR__ . '/../../includes/footer.php'; ?>
 
     </div>
 </body>
