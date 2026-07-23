@@ -1,4 +1,4 @@
-<footer class="w-full flex justify-evenly text-text-muted mt-5">
+<footer class="w-full flex justify-evenly text-text-muted py-2 bg-background rounded-b-xl md:rounded-tl-xl mb-2">
     <p>© 2026 MACM HUB</p>
     <p class="hidden md:flex md:gap-2">
         <a href="https://github.com/miguel844" target="_blank">GitHub</a> 

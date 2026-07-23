@@ -1,5 +1,5 @@
 <!-- HEAD -->
-<?php include_once __DIR__ .'/../../includes/head.php';?>
+<?php include_once __DIR__ .'/../../includes/public_head.php';?>
 
 <body class="bg-background text-text">
     <div class="container mx-auto w-full h-screen flex flex-col items-center border-x border-border">

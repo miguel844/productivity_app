@@ -7,7 +7,7 @@ unset($_SESSION['errors']);
 ?>
 
 <!-- HEAD -->
-<?php include_once __DIR__ . '/../../includes/head.php'; ?>
+<?php include_once __DIR__ . '/../../includes/public_head.php'; ?>
 
 <body class="bg-background text-text">
     <div class="container mx-auto w-full h-screen flex flex-col items-center border-x border-border">
@@ -47,7 +47,7 @@ unset($_SESSION['errors']);
                             id="email"
                             name="email"
                             placeholder="ejemplo@ejemplo.com"
-                            value="<?= htmlspecialchars($email) ?>"
+                            value="<?= /*htmlspecialchars($email) */"ejemplo@ejemplo.com" ?>"
                             class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
@@ -61,6 +61,7 @@ unset($_SESSION['errors']);
                             id="password"
                             name="password"
                             placeholder="Ab123456789"
+                            value="Ab123456789"
                             class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
