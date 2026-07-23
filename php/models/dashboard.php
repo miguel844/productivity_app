@@ -1,13 +1,8 @@
 <?php
-
-
-
 $user = $_SESSION['currentUser'];
-
 $name = $user['name'];
 
 $currentHours = date("H");
-
 $greet = "";
 
 if ($currentHours >= 6 && $currentHours < 12) {
@@ -17,8 +12,6 @@ if ($currentHours >= 6 && $currentHours < 12) {
 } else {
     $greet = "Buenas noches, $name!";
 }
-
-
 
 
 $currentDate = new DateTime();

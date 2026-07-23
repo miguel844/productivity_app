@@ -22,10 +22,12 @@
             </div>
             <!-- Usuario -->
             <div class="bg-background flex rounded-tr-xl gap-4 p-5 items-center">
-                <div id="icoUsuario" class="flex justify-end mr-2 mt-2 transition-colors duration-200 cursor-pointer">
-                    <i data-lucide="User"></i>
-                    <p><?= $name ?></p>
-                </div>
+                <a href="php/auth/logout.php">
+                    <div class="flex justify-end mr-2 mt-2 transition-colors duration-200 cursor-pointer">
+                        <i data-lucide="User"></i>
+                        <p><?= $name ?></p>
+                    </div>
+                </a>    
                 <div id="icoDarkMode" class="flex justify-end mr-2 mt-2 transition-colors duration-200 cursor-pointer">
                     <i data-lucide="moon"></i>
                 </div>
