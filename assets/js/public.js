@@ -11,9 +11,9 @@ function init() {
 // Boton modo oscuro
 function setupDarkMode() {
 
-    const darkMode = document.getElementById("darkMode");
+    const btnDarkMode = document.getElementById("btnDarkMode");
 
-    darkMode.addEventListener("click", function () {
+    btnDarkMode.addEventListener("click", function () {
 
         if (document.body.classList.contains("dark")) {
             localStorage.setItem("theme", "light");
@@ -28,18 +28,18 @@ function setupDarkMode() {
 function applyTheme() {
 
     const logo = document.getElementById("logo");
-    const darkMode = document.getElementById("darkMode");
+    const btnDarkMode = document.getElementById("btnDarkMode");
 
     const theme = localStorage.getItem("theme");
 
     if (theme === "dark") {
         document.body.classList.add("dark");
         logo.src = "../assets/icons/logo_M_hex_dark.svg";
-        darkMode.innerHTML = '<i data-lucide="sun"></i>';
+        btnDarkMode.innerHTML = '<i data-lucide="sun"></i>';
     } else {
         document.body.classList.remove("dark");
         logo.src = "../assets/icons/logo_M_hex_light.svg";
-        darkMode.innerHTML = '<i data-lucide="moon"></i>';
+        btnDarkMode.innerHTML = '<i data-lucide="moon"></i>';
     }
 
     lucide.createIcons();

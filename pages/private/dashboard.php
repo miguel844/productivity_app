@@ -2,7 +2,7 @@
 <?php require_once __DIR__ . '/../../php/middleware/auth.php'; ?>
 
 <!-- HEAD -->
-<?php include_once __DIR__ . '/../../includes/private_head.php'; ?>
+<?php include_once __DIR__ . '/../../includes/head.php'; ?>
 
 <!-- Funcionalidad del dashboard -->
 <?php include_once __DIR__ . '/../../php/models/dashboard.php'; ?>
@@ -12,7 +12,7 @@
         <header class="w-full flex mt-5">
             <!-- Logo -->
             <div class="flex items-center gap-4 p-5 rounded-tl-xl md:rounded-bl-xl bg-background">
-                <img id="logoMenu" src="/assets/icons/logo_M_hex_light.svg" alt="Logo MACM HUB" class="h-15">
+                <img id="logo" alt="Logo MACM HUB" class="h-15">
                 <h2 class="font-title text-3xl font-semibold">MACM <span class="text-brand">HUB</span></h2>
             </div>
             <!-- Cabecera -->
@@ -23,12 +23,13 @@
             <!-- Usuario -->
             <div class="bg-background flex rounded-tr-xl gap-4 p-5 items-center">
                 <a href="php/auth/logout.php">
-                    <div class="flex justify-end mr-2 mt-2 transition-colors duration-200 cursor-pointer">
-                        <i data-lucide="User"></i>
-                        <p><?= $name ?></p>
+                    <div class="flex justify-end mr-2 mt-2 transition-colors duration-200 cursor-pointer gap-1 hover:text-brand">
+                        <!-- <i data-lucide="User"></i> -->
+                        <i data-lucide="UserX"></i>
+                        <p>Cerrar sesion</p>
                     </div>
                 </a>    
-                <div id="icoDarkMode" class="flex justify-end mr-2 mt-2 transition-colors duration-200 cursor-pointer">
+                <div id="btnDarkMode" class="flex justify-end mr-2 mt-2 transition-colors duration-200 cursor-pointer">
                     <i data-lucide="moon"></i>
                 </div>
             </div>
@@ -37,8 +38,8 @@
         <div class="flex flex-1">
 
             <aside class="hidden md:w-66.75 md:flex md:flex-col bg-background">
-                <div class="bg-surface h-full w-full  p-4 pb-2 rounded-r-xl">
-                    <div class="w-full text-center">
+                <div class="bg-surface h-full w-full  p-4 pb-2 rounded-tr-xl">
+                    <div class="w-full flex justify-end hover:text-brand cursor-pointer">
                         <i data-lucide="PanelRightOpen"></i>
                     </div>
                     <ul>
@@ -53,7 +54,7 @@
                 </div>
             </aside>
 
-            <main class="flex-1 p-5 bg-background">
+            <main class="flex-1 p-5 bg-background rounded-b-2xl">
                 <h1>Esto es el main</h1>
                 <h1>Esto es el main</h1>
                 <h1>Esto es el main</h1>
@@ -64,6 +65,9 @@
                 <h1>Esto es el main</h1>
                 <h1>Esto es el main</h1>
                 <h1>Esto es el main</h1>
+                <div class="bg-surface">asdasdasd</div>
+
+
             </main>
 
         </div>

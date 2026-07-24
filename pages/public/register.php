@@ -8,15 +8,15 @@ unset($_SESSION['old']);
 
 ?>
 <!-- HEAD -->
-<?php include_once __DIR__ . '/../../includes/public_head.php'; ?>
+<?php include_once __DIR__ . '/../../includes/head.php'; ?>
 
-<body class="bg-background text-text">
-    <div class="container mx-auto w-full h-screen flex flex-col items-center border-x border-border">
+<body class="text-text bg-background-tertiary overflow-y-scroll">
+    <div class="container mx-auto w-full min-h-screen flex flex-col items-center pt-1">
         <!-- Cabecera -->
         <?php include_once __DIR__ . '/../../includes/public_header.php'; ?>
-        <main class="flex-1 flex items-start justify-center px-6 mt-8">
+        <main class="bg-background w-full flex-1 flex items-start justify-center px-6 rounded-b-2xl p-5">
 
-            <section class="w-full max-w-md bg-surface border border-border rounded-xl p-8 mt-5">
+            <section class="max-w-md bg-background-secondary border border-border rounded-xl p-8">
 
                 <h1 class="text-3xl font-bold font-title text-center mb-2">
                     Crear cuenta
@@ -50,7 +50,7 @@ unset($_SESSION['old']);
                             maxlength="50"
                             placeholder="Tu nombre"
                             value="<?= htmlspecialchars($old['name'] ?? '') ?>"
-                            class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
+                            class="w-full rounded-md border border-border bg-surface-hover px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
                     <div>
@@ -65,7 +65,7 @@ unset($_SESSION['old']);
                             maxlength="100"
                             placeholder="correo@ejemplo.com"
                             value="<?= htmlspecialchars($old['email'] ?? '') ?>"
-                            class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
+                            class="w-full rounded-md border border-border bg-surface-hover px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
                     <div>
@@ -79,7 +79,7 @@ unset($_SESSION['old']);
                             required
                             minlength="8"
                             placeholder="********"
-                            class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
+                            class="w-full rounded-md border border-border bg-surface-hover px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
                     <div>
@@ -93,7 +93,7 @@ unset($_SESSION['old']);
                             required
                             minlength="8"
                             placeholder="********"
-                            class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
+                            class="w-full rounded-md border border-border bg-surface-hover px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
                     <button
@@ -106,7 +106,7 @@ unset($_SESSION['old']);
                 <div class="mt-6 text-center">
                     <p class="text-text-muted">
                         ¿Ya tienes una cuenta?
-                        <a href="?page=login" class="text-brand hover:text-brand-hover">
+                        <a href="?page=login" class="text-brand hover:text-brand-hover font-bold">
                             Inicia sesión
                         </a>
                     </p>

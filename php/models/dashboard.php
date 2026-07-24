@@ -8,7 +8,7 @@ $greet = "";
 if ($currentHours >= 6 && $currentHours < 12) {
     $greet = "Buenos días, $name!";
 } else if ($currentHours >= 12 && $currentHours < 21) {
-    $greet = "Buenas tardes, $name!`";
+    $greet = "Buenas tardes, $name!";
 } else {
     $greet = "Buenas noches, $name!";
 }

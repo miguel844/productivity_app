@@ -1,11 +1,11 @@
 <!-- HEAD -->
-<?php include_once __DIR__ .'/../../includes/public_head.php';?>
+<?php include_once __DIR__ .'/../../includes/head.php';?>
 
-<body class="bg-background text-text">
-    <div class="container mx-auto w-full h-screen flex flex-col items-center border-x border-border">
+<body class="text-text bg-background-tertiary overflow-y-scroll">
+    <div class="container mx-auto w-full min-h-screen flex flex-col items-center pt-1">
         <!-- Cabecera -->
-        <?php include_once __DIR__ .'/../../includes/public_header.php';?>
-        <main class="mt-5 flex-1">
+        <?php include_once __DIR__ . '/../../includes/public_header.php'; ?>
+        <main class="bg-background w-full flex-1 flex flex-col items-start rounded-b-2xl p-5">
             
             
             <section class="md:px-30 px-10 max-w-7xl">

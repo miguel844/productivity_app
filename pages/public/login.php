@@ -7,16 +7,15 @@ unset($_SESSION['errors']);
 ?>
 
 <!-- HEAD -->
-<?php include_once __DIR__ . '/../../includes/public_head.php'; ?>
+<?php include_once __DIR__ . '/../../includes/head.php'; ?>
 
-<body class="bg-background text-text">
-    <div class="container mx-auto w-full h-screen flex flex-col items-center border-x border-border">
+<body class="text-text bg-background-tertiary overflow-y-scroll">
+    <div class="container mx-auto w-full min-h-screen flex flex-col items-center pt-1">
         <!-- Cabecera -->
         <?php include_once __DIR__ . '/../../includes/public_header.php'; ?>
-        <main class="flex-1 flex items-start justify-center px-6">
+        <main class="bg-background w-full flex-1 flex items-start justify-center rounded-b-2xl p-5">
 
-            <section class="w-full max-w-md bg-surface border border-border rounded-xl p-8 mt-5">
-
+            <section class="max-w-md bg-background-secondary border border-border rounded-xl p-8">
                 <h1 class="text-3xl font-bold font-title text-center mb-2">
                     Iniciar sesión
                 </h1>
@@ -35,7 +34,7 @@ unset($_SESSION['errors']);
                     </div>
                 <?php endif; ?>
 
-                <form action="php/auth/login.php" method="post" class="flex flex-col gap-5">
+                <form action="php/auth/login.php" method="post" class=" flex flex-col gap-5">
 
                     <div>
                         <label for="email" class="block mb-2 font-medium">
@@ -48,7 +47,7 @@ unset($_SESSION['errors']);
                             name="email"
                             placeholder="ejemplo@ejemplo.com"
                             value="<?= /*htmlspecialchars($email) */"ejemplo@ejemplo.com" ?>"
-                            class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
+                            class="w-full rounded-md border border-border bg-surface-hover px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
                     <div>
@@ -62,7 +61,7 @@ unset($_SESSION['errors']);
                             name="password"
                             placeholder="Ab123456789"
                             value="Ab123456789"
-                            class="w-full rounded-md border border-border bg-background-secondary px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
+                            class="w-full rounded-md border border-border  bg-surface-hover px-4 py-3 focus:outline-none focus:ring-2 focus:ring-brand">
                     </div>
 
                     <button
@@ -76,7 +75,7 @@ unset($_SESSION['errors']);
                 <div class="mt-6 text-center">
                     <p class="text-text-muted">
                         ¿No tienes una cuenta?
-                        <a href="?page=register" class="text-brand hover:text-brand-hover">
+                        <a href="?page=register" class="text-brand hover:text-brand-hover font-bold">
                             Regístrate
                         </a>
                     </p>
