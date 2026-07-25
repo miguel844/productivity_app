@@ -11,6 +11,9 @@ if (isset($_SESSION['user'])) {
     $page = $_GET['page'] ?? null;
 
     switch ($page) {
+        case '':
+            include_once __DIR__ . '/pages/public/home.php';
+            break;
         case 'login':
             include_once __DIR__ . '/pages/public/login.php';
             break;
