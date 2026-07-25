@@ -2,7 +2,7 @@
 session_start();
 
 // Conexion base de datos
-require_once __DIR__ .'/config/database.php';
+require_once __DIR__ . '/config/database.php';
 
 // Enrutador
 if (isset($_SESSION['user'])) {
@@ -10,18 +10,24 @@ if (isset($_SESSION['user'])) {
 } else {
     $page = $_GET['page'] ?? null;
 
-    switch ($page){
+    switch ($page) {
         case 'login':
-        include_once __DIR__ .'/pages/public/login.php';
-        break;
+            include_once __DIR__ . '/pages/public/login.php';
+            break;
         case 'register':
-        include_once __DIR__ .'/pages/public/register.php';
-        break;
+            include_once __DIR__ . '/pages/public/register.php';
+            break;
         case 'dashboard':
-        include_once __DIR__ .'/pages/private/dashboard.php';
-        break;
-        
+            include_once __DIR__ . '/pages/private/dashboard.php';
+            break;
+
         default:
-        include_once __DIR__ .'/pages/public/home.php';
+            if (isset($_SESSION['currentUser'])) {
+                // Include zona privada
+                include_once __DIR__ . '/pages/private/dashboard.php';
+            } else {
+                // Rutas públicas
+                include_once __DIR__ . '/pages/public/login.php';
+            }
     }
 }

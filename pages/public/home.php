@@ -1,7 +1,7 @@
 <!-- HEAD -->
 <?php include_once __DIR__ .'/../../includes/head.php';?>
 
-<body class="text-text bg-background-tertiary overflow-y-scroll">
+<body class="text-text bg-background-tertiary overflow-y-scroll mx-5">
     <div class="container mx-auto w-full min-h-screen flex flex-col items-center pt-1">
         <!-- Cabecera -->
         <?php include_once __DIR__ . '/../../includes/public_header.php'; ?>

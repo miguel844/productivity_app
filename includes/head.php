@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MACM HUB</title>
     <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/sidebar.css">
     <!-- CDN lucide (iconos) -->
     <script src="https://unpkg.com/lucide@latest"></script>
     

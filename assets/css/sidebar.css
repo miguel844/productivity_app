@@ -1,0 +1,13 @@
+#sidebar {
+    transition: width 200ms ease;
+}
+
+.sidebar-collapsed {
+    width: 72px;
+}
+
+.sidebar-collapsed .menu-text{
+    display:none;
+}
+
+
