@@ -7,6 +7,7 @@
     <title>MACM HUB</title>
     <link rel="stylesheet" href="assets/css/output.css">
     <link rel="stylesheet" href="assets/css/sidebar.css">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico" type="image/x-icon">
     <!-- CDN lucide (iconos) -->
     <script src="https://unpkg.com/lucide@latest"></script>
     
