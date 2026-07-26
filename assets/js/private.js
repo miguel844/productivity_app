@@ -2,8 +2,25 @@ console.log("La privada funciona");
 
 document.addEventListener("DOMContentLoaded", () => {
     initNavbar();
+    initAside();
     setActiveLink();
 });
+function initAside(){
+
+    const sidebar = document.getElementById("sidebar");
+    const btnPanel = document.getElementById("iconPanel");
+    
+    const iconOpen = document.getElementById("iconOpen");
+    const iconClose = document.getElementById("iconClose");
+    
+    btnPanel.addEventListener("click", () => {
+        
+        sidebar.classList.toggle("sidebar-collapsed");
+        
+        iconOpen.classList.toggle("hidden");
+        iconClose.classList.toggle("hidden");
+    });
+}
 
 function initNavbar() {
     const btn = document.getElementById("menu-btn");
@@ -13,37 +30,37 @@ function initNavbar() {
 
     if (!btn || !mobileMenu) return;
 
-btn.addEventListener("click", () => {
+    btn.addEventListener("click", () => {
 
-    if (mobileMenu.classList.contains("translate-x-full")) {
+        if (mobileMenu.classList.contains("translate-x-full")) {
 
-        // Abrir
-        mobileMenu.classList.remove("translate-x-full");
-        mobileMenu.classList.add("translate-x-0");
-        headerHamburger.classList.remove("rounded-tr-2xl");
-        headerHamburger.classList.add("rounded-r-2xl");
-        
-      } else {
-        
-        // Cerrar
-        mobileMenu.classList.remove("translate-x-0");
-        mobileMenu.classList.add("translate-x-full");
-        headerHamburger.classList.remove("rounded-r-2xl");
-        headerHamburger.classList.add("rounded-tr-2xl");
+            // Abrir
+            mobileMenu.classList.remove("translate-x-full");
+            mobileMenu.classList.add("translate-x-0");
+            headerHamburger.classList.remove("rounded-tr-2xl");
+            headerHamburger.classList.add("rounded-r-2xl");
 
-    }
+        } else {
 
-    // Animación hamburguesa -> X
-    bars[0].classList.toggle("rotate-45");
-    bars[0].classList.toggle("translate-y-3.5");
-    bars[0].classList.toggle("h-2");
+            // Cerrar
+            mobileMenu.classList.remove("translate-x-0");
+            mobileMenu.classList.add("translate-x-full");
+            headerHamburger.classList.remove("rounded-r-2xl");
+            headerHamburger.classList.add("rounded-tr-2xl");
 
-    bars[1].classList.toggle("opacity-0");
+        }
 
-    bars[2].classList.toggle("-rotate-45");
-    bars[2].classList.toggle("-translate-y-3.5");
-    bars[2].classList.toggle("h-2");
-});
+        // Animación hamburguesa -> X
+        bars[0].classList.toggle("rotate-45");
+        bars[0].classList.toggle("translate-y-3.5");
+        bars[0].classList.toggle("h-2");
+
+        bars[1].classList.toggle("opacity-0");
+
+        bars[2].classList.toggle("-rotate-45");
+        bars[2].classList.toggle("-translate-y-3.5");
+        bars[2].classList.toggle("h-2");
+    });
 }
 
 function setActiveLink() {

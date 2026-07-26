@@ -3,6 +3,7 @@
 
 <!-- HEAD -->
 <?php include_once __DIR__ . '/../../includes/head.php'; ?>
+<?php include_once __DIR__ . '/../../includes/private_head.php'; ?>
 
 <!-- Funcionalidad del dashboard -->
 <?php include_once __DIR__ . '/../../php/models/dashboard.php'; ?>

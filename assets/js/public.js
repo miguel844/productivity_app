@@ -46,19 +46,6 @@ function applyTheme() {
     lucide.createIcons();
 }
 
-const sidebar = document.getElementById("sidebar");
-const btnPanel = document.getElementById("iconPanel");
-
-const iconOpen = document.getElementById("iconOpen");
-const iconClose = document.getElementById("iconClose");
-
-btnPanel.addEventListener("click", () => {
-
-    sidebar.classList.toggle("sidebar-collapsed");
-
-    iconOpen.classList.toggle("hidden");
-    iconClose.classList.toggle("hidden");
-});
 
 
 
