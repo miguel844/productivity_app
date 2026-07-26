@@ -12,4 +12,5 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     
     <script src="assets/js/public.js" defer></script>
+    <script src="assets/js/private.js" defer></script>
 </head>
