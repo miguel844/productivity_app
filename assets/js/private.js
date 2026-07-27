@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initAside();
     setActiveLink();
 });
+
 function initAside(){
 
     const sidebar = document.getElementById("sidebar");
